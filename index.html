@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Auction DApp</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollreveal/4.0.9/scrollreveal.min.js"></script>
+    <style>
+      /* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Background */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    background: rgb(194,139,252);
+    background: radial-gradient(circle, rgba(194,139,252,1) 13%, rgba(164,98,233,1) 20%, rgba(214,180,250,1) 32%, rgba(249,0,43,1) 59%, rgba(141,5,5,1) 85%, rgba(250,50,50,1) 85%, rgba(141,5,5,1) 93%);
+    animation: bgAnimation 10s infinite alternate;
+    background-size: 400% 400%;
+}
+
+/* Background Animation */
+@keyframes bgAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Header and Navbar */
+header {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #fff;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #c78ff2;
+}
+
+/* Hero Section */
+.hero-section {
+    text-align: center;
+    margin-top: 70px;
+    padding: 50px 20px;
+}
+
+.hero-section h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.hero-section button {
+    background-color: #c78ff2;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.hero-section button:hover {
+    background-color: #a061c9;
+}
+
+/* Info Sections */
+.info-section {
+    text-align: center;
+    padding: 50px 20px;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.info-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.info-section p, .info-section ul {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.info-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.info-section ul li {
+    margin: 10px 0;
+}
+
+/* Security Banner */
+.secure-banner {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 1.3em;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.6);
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .hero-section h1 {
+        font-size: 2.5em;
+    }
+
+    .hero-section p {
+        font-size: 1em;
+    }
+
+    .info-section h2 {
+        font-size: 2em;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <div class="logo">Dynamic Auction</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#security">Security</a></li>
+                <li><a href="#start">Get Started</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <h1>Welcome to Dynamic Auction</h1>
+        <p>Secure, transparent, and dynamic auctions powered by blockchain technology.</p>
+        <button onclick="startApp()">Launch App</button>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="info-section">
+        <h2>About Our DApp</h2>
+        <p>Dynamic Auction enables secure and transparent auctions using the power of blockchain. Create or participate in auctions with ease.</p>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="info-section">
+        <h2>Features</h2>
+        <ul>
+            <li>Create and manage your own auctions.</li>
+            <li>Bid securely with blockchain-powered transactions.</li>
+            <li>Fully decentralized and tamper-proof.</li>
+            <li>Instant notifications for bidding updates.</li>
+        </ul>
+    </section>
+
+    <!-- Security Section -->
+    <section id="security" class="info-section">
+        <h2>Security First</h2>
+        <p>Your transactions are safeguarded with blockchain encryption. Only you control your data and funds.</p>
+        <div class="secure-banner">
+            <p>🔒 Fully Decentralized and Secure</p>
+        </div>
+    </section>
+
+    <!-- Get Started Section -->
+    <section id="start" class="info-section">
+        <h2>Get Started</h2>
+        <p>Connect your wallet to explore the world of dynamic auctions. Ready to start?</p>
+        <button onclick="startApp()">Launch App</button>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Dynamic Auction DApp. All rights reserved.</p>
+    </footer>
+
+    <script>
+        ScrollReveal().reveal('.info-section', {
+            origin: 'bottom',
+            distance: '50px',
+            duration: 1000,
+            reset: true
+        });
+
+        function startApp() {
+    window.location.href = "auction.html"; // Redirects to auction.html
+}
+
+    </script>
+</body>
+</html>

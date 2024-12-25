@@ -1,0 +1,160 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: rgb(194,139,252);
+    background: radial-gradient(circle, rgba(194,139,252,1) 13%, rgba(164,98,233,1) 20%, rgba(214,180,250,1) 32%, rgba(249,0,43,1) 59%, rgba(141,5,5,1) 85%, rgba(250,50,50,1) 85%, rgba(141,5,5,1) 93%);
+    animation: backgroundAnimation 8s infinite alternate;
+    color: #fff; /* Adjust text color for better contrast */
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Background animation */
+@keyframes backgroundAnimation {
+    0% {
+        background: radial-gradient(circle, rgba(194,139,252,1) 13%, rgba(164,98,233,1) 20%, rgba(214,180,250,1) 32%, rgba(249,0,43,1) 59%, rgba(141,5,5,1) 85%, rgba(250,50,50,1) 85%, rgba(141,5,5,1) 93%);
+    }
+    50% {
+        background: radial-gradient(circle, rgba(194,139,252,1) 18%, rgba(164,98,233,1) 25%, rgba(214,180,250,1) 37%, rgba(249,0,43,1) 63%, rgba(141,5,5,1) 88%, rgba(250,50,50,1) 88%, rgba(141,5,5,1) 95%);
+    }
+    100% {
+        background: radial-gradient(circle, rgba(194,139,252,1) 13%, rgba(164,98,233,1) 20%, rgba(214,180,250,1) 32%, rgba(249,0,43,1) 59%, rgba(141,5,5,1) 85%, rgba(250,50,50,1) 85%, rgba(141,5,5,1) 93%);
+    }
+}
+
+/* Main container */
+.main-container {
+    background-color: rgba(255, 255, 255, 0.85); /* Semi-transparent white */
+    border-radius: 15px;
+    padding: 30px;
+    width: 90%; /* Wider to occupy more screen */
+    max-width: 800px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    backdrop-filter: blur(10px);
+}
+
+/* Title styles */
+h1 {
+    font-size: 2.8em;
+    color: #141414; /* Darker text for better contrast */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2em;
+    color: #141414;
+    margin-bottom: 10px;
+}
+
+/* Paragraph and text */
+p {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #141414;
+}
+
+/* Button styles */
+button {
+    background-color: #141414; /* Black for strong contrast */
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+    max-width: 300px;
+}
+
+button:hover {
+    background-color: #333; /* Slightly lighter black */
+    transform: scale(1.05);
+}
+
+button:disabled {
+    background-color: #bbb; /* Disabled button color */
+    cursor: not-allowed;
+}
+
+/* Input field styles */
+input[type="number"], input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1.1em;
+    transition: border-color 0.3s ease;
+}
+
+input[type="number"]:focus, input[type="text"]:focus {
+    border-color: #141414; /* Black border on focus */
+    outline: none;
+}
+
+/* Wallet connect section */
+#wallet-connect {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Auction details */
+#auction-details {
+    display: none;
+}
+
+#auction-status {
+    font-size: 1.2em;
+    color: #e74c3c; /* Red for status text */
+    margin-bottom: 20px;
+}
+
+/* Auction status and button visibility */
+#endAuctionButton {
+    display: none;
+    margin-top: 20px;
+}
+
+button#endAuctionButton {
+    width: auto;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .main-container {
+        padding: 20px;
+    }
+
+    button {
+        font-size: 1em;
+    }
+
+    h1 {
+        font-size: 2.2em;
+    }
+
+    h2 {
+        font-size: 1.6em;
+    }
+}
