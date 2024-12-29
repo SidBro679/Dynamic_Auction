@@ -11,9 +11,8 @@
 - **User-Friendly Interface**: Connect wallets and manage auctions with ease.
 
 ## Smart Contract Details
-- **Contract Address**: [0x9b3b3Ea5A44344152830d14Cbfc84A709a506605](https://xt4scan.ngd.network/address/0x9b3b3Ea5A44344152830d14Cbfc84A709a506605) 
-
-- **Network**: Neo X Testnet T4  
+- **Contract Address**: [0x9b3b3Ea5A44344152830d14Cbfc84A709a506605](https://xexplorer.neo.org/address/0x9b3b3Ea5A44344152830d14Cbfc84A709a506605)
+- **Network**: Neo X Mainnet
 - **Technology**: Solidity  
 
 ## How to Use
